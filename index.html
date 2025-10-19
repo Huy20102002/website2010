@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chúc Mừng 20/10 - Em Yêu</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+<!-- Google Fonts -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Pacifico&display=swap"
+    rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<audio id="backgroundMusic" loop preload="auto" autoplay maudiouted>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<body class="min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden relative"
+    style="background-image: url('image/backgorund.png');">
+<div class="loading-wrapper flex w-full items-center justify-center absolute inset-0 z-50 bg-black bg-opacity-50">
+    <div class="loading"></div>
+</div>
+    <div class="absolute bottom-3 left-3 z-10 w-48">
+        <img src="image/icon/mewmew.gif" alt="Flower" class="w-full h-full object-cover" />
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="backgroundMusic" loop preload="auto" autoplay>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Photo Gallery Box (Bottom Right Corner) -->
+    <!-- ============ PHOTO STACK ============ -->
+    <div class="fixed bottom-6 right-6 z-10 md:bottom-8 md:right-8 animate-pulse">
+        <button class="photo-stack relative w-40 h-40 cursor-pointer outline-none"
+            type="button" aria-label="Open photo gallery" onclick="openGallery()">
+            <!-- Ảnh 1 -->
+            <div class="photo-layer absolute inset-0 bg-white rounded-lg shadow-2xl border-2 p-1"
+                style="--r:12deg; --d:0.8s">
+                <img src="image/1.jpg" alt="Photo 1" class="w-full h-full object-cover rounded-md" />
+            </div>
+
+            <!-- Ảnh 2 -->
+            <div class="photo-layer absolute inset-0 bg-white rounded-lg shadow-xl border-2 p-1"
+                style="--r:-8deg; --d:0.4s">
+                <img src="image/2.jpg" alt="Photo 2" class="w-full h-full object-cover rounded-md" />
+            </div>
+
+            <!-- Ảnh 3 -->
+            <div class="photo-layer absolute inset-0 bg-white rounded-lg shadow-lg border-2 p-1"
+                style="--r:5deg; --d:0s">
+                <img src="image/3.jpg" alt="Photo 3" class="w-full h-full object-cover rounded-md" />
+            </div>
+
+            <!-- Ảnh 4 -->
+            <div class="photo-layer absolute inset-0 bg-white rounded-lg shadow-md border-2 p-1"
+                style="--r:-3deg; --d:1.2s">
+                <img src="image/5.jpg" alt="Photo 4" class="w-full h-full object-cover rounded-md" />
+            </div>
+
+            <!-- Badge -->
+            <span
+                class="photo-badge absolute -bottom-2 -right-2 sm:-bottom-3 sm:-right-3 bg-pink-500 text-white rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center text-sm sm:text-base font-bold z-40 shadow-xl border-2 border-white select-none">
+                18+
+            </span>
+        </button>
+    </div>
+    <!-- Main Card -->
+    <div class="flex items-center justify-center min-h-screen p-4 sm:p-6 md:p-8">
+        <div class="relative">
+            <!-- Card Background -->
+            <div
+                class="main-card w-[28rem] h-[32rem] bg-gradient-to-br from-pink-300 via-pink-400 to-rose-400 rounded-2xl sm:rounded-3xl shadow-2xl hover:shadow-pink-300/50 transform hover:scale-105 rotate-1 transition-all duration-700 relative overflow-hidden">
+
+                <div class="absolute bottom-0 left-0 z-10 w-32">
+                    <img src="image/icon/heartAnimation.gif" alt="Flower"
+                        class="w-full h-full object-cover rounded-full" />
+                </div>
+                <!-- Content Box -->
+                <div
+                    class="absolute inset-3 bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 px-2 flex flex-col text-center  hover:shadow-2xl transition-all duration-500">
+                    <h1 id="typing-title" class="text-xl sm:text-3xl font-bold text-pink-600 mb-3 sm:mb-4"
+                        style="font-family: 'Great Vibes', cursive; min-height: 2.5rem;">
+                    </h1>
+                    <div class="flex-1 overflow-y-auto custom-scrollbar space-y-2 sm:space-y-3">
+                        <p id="typing-subtitle" class="text-sm sm:text-lg text-pink-500 font-medium"
+                            style="font-family: 'Dancing Script', cursive; min-height: 1.5rem;">
+                        </p>
+                        <p id="typing-content" class="text-xs sm:text-base text-gray-700 leading-relaxed"
+                            style="font-family: 'Dancing Script', cursive; font-weight: 500; min-height: 15rem;">
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="fixed inset-0 bg-black z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="relative w-full h-full max-w-md mx-auto">
+                <!-- Close Button -->
+                <button onclick="closeGallery()"
+                    class="absolute top-4 right-4 z-10 bg-white/40 hover:bg-white/50 text-white rounded-full p-3 transition-all duration-300 backdrop-blur-sm">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+
+                <!-- Gallery Container -->
+                <div class="overflow-hidden flex flex-col">
+                    <div class="relative flex-1 flex items-center justify-center">
+                        <!-- Main Image -->
+                        <div class="w-full h-full flex items-center justify-center p-4 h-fit relative overflow-hidden">
+                            <!-- Background watermark image -->
+                            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 blur-sm scale-110"
+                                id="backgroundWatermark" style="background-image: url('image/1.jpg');">
+                            </div>
+                            <!-- Main image -->
+                            <img id="currentImage" src="image/1.jpg" alt="Current Image"
+                                class="max-w-full max-h-full duration-500 object-cover relative z-10 rounded-md">
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <button onclick="previousImage()"
+                            class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/40 hover:bg-white/50 text-white rounded-full p-3 transition-all duration-300 backdrop-blur-sm">
+                            <svg class="w-5 h-5 w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+                        <button onclick="nextImage()"
+                            class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/40 hover:bg-white/50 text-white rounded-full p-3 transition-all duration-300 backdrop-blur-sm">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
