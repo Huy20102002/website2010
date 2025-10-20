@@ -185,12 +185,11 @@ function handleSwipe() {
 const textContent = {
     title: "🌸 Chúc Mừng 20/10 🌸",
     subtitle: "Gửi đến cô gái đặc biệt nhất của anh",
-    content: `Nay là 20/10, anh chúc bé iu của anh luôn vui vẻ, hạnh phúc, ngày càng xinh đẹp và giữ được tinh thần tích cực dù ở bất cứ hoàn cảnh nào 💪  
-    Mong bé sẽ luôn thành công trong mọi việc, gặp thật nhiều may mắn, và luôn có những người tốt ở bên cạnh để yêu thương, che chở 💐  
-Anh chỉ mong bé có tất cả những điều tốt đẹp nhất, trừ vất vả và mệt mỏi thôi 🥺  
-
-Cảm ơn bé vì đã xuất hiện, đã khiến cuộc sống của anh trở nên ấm áp và vui vẻ hơn từng ngày. 🌷  
-Yêu thương bé thật nhiều ❤️  
+    content: `Nay là 20/10, anh chúc em iu của anh luôn vui vẻ, hạnh phúc, ngày càng xinh đẹp và giữ được tinh thần tích cực dù ở bất cứ hoàn cảnh nào 💪  
+    Mong em sẽ luôn thành công trong mọi việc, gặp thật nhiều may mắn, và luôn có những người tốt ở bên cạnh để yêu thương, che chở 💐  
+Anh chỉ mong em có tất cả những điều tốt đẹp nhất, trừ vất vả và mệt mỏi thôi 🥺  
+Cảm ơn em vì đã xuất hiện, đã khiến cuộc sống của anh trở nên ấm áp và vui vẻ hơn từng ngày. 🌷  
+Yêu thương em thật nhiều ❤️  
 `
 };
 
